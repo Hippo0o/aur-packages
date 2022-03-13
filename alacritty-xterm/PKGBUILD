@@ -1,0 +1,19 @@
+# Maintainer: Me
+pkgname=alacritty-xterm
+pkgver=353
+pkgrel=1
+arch=('x86_64')
+license=('GPL')
+depends=('alacritty')
+conflicts=('xterm')
+provides=('xterm')
+
+package() {
+    tee -a xterm <<END
+#! /bin/bash
+alacritty -e "\$( sed -e "s/^-\w//" <<< \$@ )"
+END
+
+    install -Dm755 xterm -t "$pkgdir/usr/bin"
+}
+
