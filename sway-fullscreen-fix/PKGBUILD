@@ -38,20 +38,13 @@ optdepends=(
 backup=(etc/sway/config)
 arch=("i686" "x86_64")
 url="https://swaywm.org"
-source=("${pkgname%-*}::git+https://github.com/swaywm/sway.git#branch=v1.7"
-	50-systemd-user.conf
-    0001-decouple-client-and-container-fullscreen.patch)
+source=("${pkgname%-*}::git+https://github.com/Hippo0o/sway.git#branch=v1.7"
+	50-systemd-user.conf)
 sha512sums=('SKIP'
-            '57590bc0d14c87289a4a9cd67991c6a841e54244d2a6186b5da5a08e633de2e8631959fa8c77ede211b0a5f315d920f2c1350951a53d6f2e9e81859056cb3c9e'
-            '321757764f94a3ba19b79c8d9ff66d43f16fda71d5b8e0a7481c2579644762e6465b1ef8b6ad40459391a7f68cbbbd6d27ba375929fff8e7cc45cd720ccc1939')
+            '57590bc0d14c87289a4a9cd67991c6a841e54244d2a6186b5da5a08e633de2e8631959fa8c77ede211b0a5f315d920f2c1350951a53d6f2e9e81859056cb3c9e')
 provides=("sway")
 conflicts=("sway")
 options=()
-
-prepare() {
-    cd sway
-    patch --forward --strip=1 --input="${srcdir}/0001-decouple-client-and-container-fullscreen.patch"
-}
 
 build() {
 	arch-meson \
