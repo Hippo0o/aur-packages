@@ -1,5 +1,5 @@
 # Maintainer: Hippo0o 
-pkgname=sway-fullscreen-fix
+pkgname=sway-git
 _pkgname=sway
 pkgver=1.7
 pkgrel=1
