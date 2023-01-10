@@ -1,7 +1,7 @@
 # Maintainer: Hippo0o 
 pkgname=sway-git
 _pkgname=sway
-pkgver=1.7
+pkgver=1.8
 pkgrel=3
 license=("MIT")
 pkgdesc="Tiling Wayland compositor and replacement for the i3 window manager"
@@ -38,7 +38,7 @@ optdepends=(
 backup=(etc/sway/config)
 arch=("i686" "x86_64")
 url="https://swaywm.org"
-source=("${pkgname%-*}::git+https://github.com/Hippo0o/sway.git#branch=v1.7"
+source=("${pkgname%-*}::git+https://github.com/Hippo0o/sway.git#branch=v${pkgver}"
 	50-systemd-user.conf)
 sha512sums=('SKIP'
             '57590bc0d14c87289a4a9cd67991c6a841e54244d2a6186b5da5a08e633de2e8631959fa8c77ede211b0a5f315d920f2c1350951a53d6f2e9e81859056cb3c9e')
