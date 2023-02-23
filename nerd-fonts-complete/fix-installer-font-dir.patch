@@ -1,0 +1,9 @@
+--- /install.sh
+--- /install.sh
+@@ -220,4 +220,4 @@ else
+   # Linux
+-  sys_font_dir="/usr/local/share/fonts"
+-  usr_font_dir="$HOME/.local/share/fonts"
++  sys_font_dir="release"
++  usr_font_dir="release"
+ fi
